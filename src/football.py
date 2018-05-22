@@ -207,7 +207,8 @@ class RcaApp():
            json data   
         """
 
-        match_url = self.api_path + "football/match/" + match_key + "/"
+        #match_url = self.api_path + "football/match/" + match_key + "/"
+        match_url = "https://e6111797.ngrok.io/get_match"
         params = {}
         params["card_type"] = card_type
         response = self.get_response(match_url, params)
@@ -225,7 +226,8 @@ class RcaApp():
            json data
         """
 
-        season_url = self.api_path + "football/season/" + season_key + "/"
+        #season_url = self.api_path + "football/season/" + season_key + "/"
+        season_url = 'https://e6111797.ngrok.io/get_season'
         params = {}
         params["card_type"] = card_type
         response = self.get_response(season_url, params)
@@ -233,7 +235,8 @@ class RcaApp():
 
     def get_tournament_matches(self, tour_key, round_key, card_type=""):
 
-        season_url = self.api_path + "football/season/" + tour_key + "/"
+        #season_url = self.api_path + "football/season/" + tour_key + "/"
+        season_url = 'https://e6111797.ngrok.io/get_tournament_rounds'
         params = {}
         params["card_type"] = card_type
         response = self.get_response(season_url, params)
@@ -265,7 +268,8 @@ class RcaApp():
 
         """
         self.check_token_active()
-        recent_seasons_url = self.api_path + "recent_seasons/"
+        recent_seasons_url = 'https://e6111797.ngrok.io/get_recent_season/'
+#        recent_seasons_url = self.api_path + "recent_seasons/"
         params = {}
         params["access_token"] = self.access_token
         response = self.get_response(recent_seasons_url, params)
