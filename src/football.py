@@ -267,7 +267,7 @@ class RcaApp():
 
         """
         self.check_token_active()
-        recent_seasons_url = self.football_path + 'v1/recent_tournaments/'
+        recent_seasons_url = self.football_path + 'recent_tournaments/'
 #        recent_seasons_url = self.api_path + "recent_seasons/"
         params = {}
         params["access_token"] = self.access_token
