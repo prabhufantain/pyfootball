@@ -76,7 +76,7 @@ class RcaApp():
         else:
             self.store_handler = RcaStorageHandler()
 
-        self.api_path = "https://rest.cricketapi.com/rest/v2/"
+        self.api_path = "https://api.footballapi.com/v1/"
 
         self.football_path = "https://api.footballapi.com/v1/"
         if device_id:
