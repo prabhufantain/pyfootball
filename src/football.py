@@ -130,7 +130,7 @@ class RcaApp():
         """
 
         if method == "post":
-            response_data = json.loads(requests.post(url, params=params).text)
+            response_data = json.loads(requests.post(url, data=params).text)
         else:
             params["access_token"] = self.get_active_token()
             response_data = json.loads(requests.get(url, params=params).text)
