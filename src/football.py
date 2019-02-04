@@ -235,7 +235,7 @@ class RcaApp():
 
     def get_tournament_matches(self, tour_key, round_key, card_type=""):
 
-        season_url = self.football_path + "tournament/{0}/round/{1}/".format(tour_key, round_key)
+        season_url = self.football_path + "tournament/{0}/round-detail/{1}/".format(tour_key, round_key)
         params = {}
         params["card_type"] = card_type
         response = self.get_response(season_url, params)
